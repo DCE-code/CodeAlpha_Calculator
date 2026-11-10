@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive calculator built with semantic HTML, CSS and JavaScript.">
+  <meta name="theme-color" content="#0b1020">
+  <title>Calc — CodeAlpha Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Calc home"><span class="brand__icon" aria-hidden="true">÷</span> calc<span class="brand__dot">.</span></a>
+      <p class="topbar__label">Simple tools. Clear thinking.</p>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" title="Toggle theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+      </button>
+    </header>
+
+    <section class="calculator" aria-labelledby="calculatorTitle">
+      <div class="calculator__heading">
+        <div>
+          <p class="eyebrow">Everyday calculator</p>
+          <h1 id="calculatorTitle">Make it <span>add up.</span></h1>
+        </div>
+        <span class="calculator__badge">STANDARD</span>
+      </div>
+
+      <div class="display" aria-label="Calculator display">
+        <p class="display__expression" id="expression" aria-live="polite"></p>
+        <output class="display__value" id="display" aria-live="assertive" aria-atomic="true">0</output>
+      </div>
+
+      <div class="keypad" role="group" aria-label="Calculator keypad">
+        <button class="key key--utility" type="button" data-action="clear" aria-label="Clear all">AC</button>
+        <button class="key key--utility" type="button" data-action="sign" aria-label="Change sign">+/−</button>
+        <button class="key key--utility" type="button" data-action="percent" aria-label="Percentage">%</button>
+        <button class="key key--operator" type="button" data-operator="÷" aria-label="Divide">÷</button>
+
+        <button class="key" type="button" data-number="7">7</button>
+        <button class="key" type="button" data-number="8">8</button>
+        <button class="key" type="button" data-number="9">9</button>
+        <button class="key key--operator" type="button" data-operator="×" aria-label="Multiply">×</button>
+
+        <button class="key" type="button" data-number="4">4</button>
+        <button class="key" type="button" data-number="5">5</button>
+        <button class="key" type="button" data-number="6">6</button>
+        <button class="key key--operator" type="button" data-operator="−" aria-label="Subtract">−</button>
+
+        <button class="key" type="button" data-number="1">1</button>
+        <button class="key" type="button" data-number="2">2</button>
+        <button class="key" type="button" data-number="3">3</button>
+        <button class="key key--operator" type="button" data-operator="+" aria-label="Add">+</button>
+
+        <button class="key key--utility" type="button" data-action="backspace" aria-label="Delete last digit">⌫</button>
+        <button class="key" type="button" data-number="0">0</button>
+        <button class="key" type="button" data-action="decimal" aria-label="Decimal point">.</button>
+        <button class="key key--equals" type="button" data-action="equals" aria-label="Equals">=</button>
+      </div>
+
+      <p class="keyboard-hint">You can also use your keyboard · Enter to calculate · Esc to clear</p>
+    </section>
+
+    <footer class="footer">
+      <span>Built with HTML, CSS & JavaScript</span>
+      <span>CodeAlpha · Frontend Internship</span>
+    </footer>
+  </main>
+</body>
+</html>
